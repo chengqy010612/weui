@@ -7,5 +7,9 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.com.google.devtools.ksp) apply false
     alias(libs.plugins.room) apply false
+
 }
+
 true // Needed to make the Suppress annotation work for the plugins block
+
+
