@@ -1,6 +1,15 @@
 pluginManagement {
     includeBuild("build-logic")
     repositories {
+        maven("https://maven.aliyun.com/repository/public")
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven {
+            url = uri(
+                "https://maven.aliyun.com/repository/jcenter"
+            )
+        }
+        maven { url = uri("https://www.jitpack.io" )}
+
         google()
         mavenCentral()
         gradlePluginPortal()
@@ -9,10 +18,21 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        maven("https://maven.aliyun.com/repository/public")
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven {
+            url = uri(
+                "https://maven.aliyun.com/repository/jcenter"
+            )
+        }
+        maven { url = uri("https://www.jitpack.io" )}
+
         google()
         mavenCentral()
     }
 }
+
+
 
 rootProject.name = "WeUI"
 include(":app")
